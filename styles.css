@@ -55,5 +55,9 @@ img {
 }
 
 .row {
-  margin-top: 3.5vh;
+  margin-top: 4vh;
+}
+
+.body-cont {
+  margin-top: 15vh;
 }
