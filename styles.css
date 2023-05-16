@@ -1,0 +1,48 @@
+/* styles.css */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  .logo {
+    font-family: Helvetica;
+    /* ... other logo styles ... */
+  }
+  
+  .navbar li a {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+body {
+    margin: 0;
+  }
+  
+  .navbar {
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .logo img {
+    max-height: 50px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin-right: 10px;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+  }
+  
