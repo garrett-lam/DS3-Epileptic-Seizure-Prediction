@@ -42,7 +42,23 @@
     <div class="row">
       <div class="col">
         <h3>General overview of dataset</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>Original Dataset Variable Explanation
+
+          The response variable is y in column 179, the Explanatory variables X1, X2, …, X178
+          
+          y contains the category of the 178-dimensional input vector. Specifically y in {1, 2, 3, 4, 5}:
+          
+          5 - eyes open, means when they were recording the EEG signal of the brain the patient had their eyes open
+          
+          4 - eyes closed, means when they were recording the EEG signal the patient had their eyes closed
+          
+          3 - Yes they identify where the region of the tumor was in the brain and recording the EEG activity from the healthy brain area
+          
+          2 - They recorder the EEG from the area where the tumor was located
+          
+          1 - Recording of seizure activity
+          
+          All subjects falling in classes 2, 3, 4, and 5 are subjects who did not have epileptic seizure. Only subjects in class 1 have epileptic seizure. Our motivation for creating this version of the data was to simplify access to the data via the creation of a .csv version of it. Although there are 5 classes most authors have done binary classification, namely class 1 (Epileptic seizure) against the rest.</p>
       </div>
       <div class="col">
         <img src="sample.png" class="img-responsive">
