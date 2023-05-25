@@ -42,8 +42,8 @@
     <div class="row">
       <div class="col">
         <h3>General overview of dataset</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      </div>
+        <p>The Epileptic Seizure Recognition dataset, available on Kaggle, provides EEG data for the classification of seizures and non-seizure states. This dataset contains EEG recordings of 500 patients’ brain activity, with each recording consisting of 23.6 seconds sampled into 4097 data points.  Each data point corresponds to the value of the EEG recording at a different point in time. These data points were split into 23 one-second chunks , where one chunk consisted of 178 data points. Each chunk is labeled with a category (1,2,3,4,5); category 5 meant that the patient’s eyes were open; category 4 meant that the patient’s eyes were closed; category 3 meant a recording of an area of the brain where the tumor was not present; category 2 meant a recording of an area of the brain where the tumor is present; category 1 meant a recording of seizure activity. Categories 2-5 are recordings of non-seizure activity.</p>
+    </div>
       <div class="col">
         <img src="sample.png" class="img-responsive">
       </div>
@@ -54,7 +54,7 @@
       </div>
       <div class="col">
         <h3>Our winning model</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>Our goal is to determine the most optimal machine learning model among the observed options (Logistic Regression, Naive Bayesian, Decision Trees, K-Nearest Neighbor, Support Vector Machine) for accurately predicting epileptic seizures based on EEG signals. In the end, we concluded that the optimal model was the Support Vector Machine (SVM) model.</p>
       </div>
     </div>
     </div>
@@ -88,7 +88,7 @@
   
   <!-- Figma Page 3 -->
   <div class="container text-left body-cont">
-    <h3>Logistic Regression</h3>
+    <h3>Support Vector Machine (SVM)</h3>
     <div class="row">
       <div class="col">
         <h3>What is this model?</h3>
@@ -105,7 +105,7 @@
     </div>
     <div class="row">
       <h3>Results</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <p>Given our goal is to identify the most optimal classification model for predicting epileptic seizures from EEG data, we define the "best model" as the one exhibiting the highest accuracy, highest F1 score, and the lowest number of type 2 errors (false negatives). In this context, a type 2 error refers to the situation where the model fails to identify seizure activity when a patient is experiencing an actual seizure. Given the critical nature of this scenario, minimizing type 2 errors is an imperative component of the best model. The above selection criteria ensures precise and reliable seizure predictions, striking a balance between correctly identifying positive instances and minimizing both false positives and false negatives. From the data above, we can see that the SVM is the best model that fits this criteria with an accuracy of 97.83%, F1 score of 94.49%, and a count of 36 for type 2 errors.</p>
       <img src="sample.png" class="img-responsive">
     </div>
     <div class="row">
@@ -126,7 +126,7 @@
     <div class="row">
       <div class="col">
         <h3>Our Dataset</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p><a></a></p>
       </div>
       <div class="col">
         <img src="img/eegcomparisons.png" class="img-responsive">
@@ -134,7 +134,7 @@
     </div>
     <div class="row">
       <h3>Link to dataset:</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <p><a href="https://www.kaggle.com/datasets/harunshimanto/epileptic-seizure-recognition">https://www.kaggle.com/datasets/harunshimanto/epileptic-seizure-recognition</a></p>
     </div>
     <div class="row">
       <h3>Further Context</h3>
