@@ -106,22 +106,24 @@ The Epileptic Seizure Recognition dataset provides an opportunity to explore the
     <div class="row">
       <div class="col">
         <h3>What is this model?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>Logistic regression is a widely used statistical model in medicine, finance, and social sciences for binary classification tasks. It models the relationship between input features and the probability of an event using the sigmoid function, which maps real-valued numbers to probabilities between 0 and 1. The model's coefficients or weights are estimated through maximum likelihood estimation, aiming to maximize the likelihood of observed data.
+        </p>
       </div>
       <div class="col">
         <h3>Our application</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>In logistic regression, the output represents the probability of the positive class, and a decision threshold (usually 0.5) is chosen to classify instances accordingly. When applied to electroencephalogram (EEG) readings for seizure detection, logistic regression proves useful. EEG readings capture brain activity, and specific patterns can indicate the presence or absence of a seizure. In this scenario, the EEG readings serve as input features, and the binary outcome represents seizure presence. By training the logistic regression model, it learns the relationship between EEG readings and seizure probability, enabling predictions on new, unseen EEG data</p>
       </div>
     </div>
     <div class="row">
       <h3>Package use</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <p>reprocessing steps, such as feature extraction of relevant information like frequency bands or statistical measures, are commonly performed on the EEG readings before fitting the logistic regression model. After training, the model can predict the seizure probability for new patients based on their EEG readings. By selecting a decision threshold, the model's predictions can be converted into binary seizure/non-seizure classifications. However, it's important to note that logistic regression assumes a linear relationship between input features and log-odds. For more complex relationships, alternative techniques like polynomial logistic regression or advanced machine learning algorithms may be more suitable. Additionally, since logistic regression assumes independent observations, other modeling approaches like recurrent neural networks (RNNs) or long short-term memory (LSTM) networks might better capture temporal dependencies in EEG data.
+      </p>
     </div>
     <div class="row">
       <h3>Results</h3>
 
       <p>Given our goal is to identify the most optimal classification model for predicting epileptic seizures from EEG data, we define the "best model" as the one exhibiting the highest accuracy, highest F1 score, and the lowest number of type 2 errors (false negatives). In this context, a type 2 error refers to the situation where the model fails to identify seizure activity when a patient is experiencing an actual seizure. Given the critical nature of this scenario, minimizing type 2 errors is an imperative component of the best model. The above selection criteria ensures precise and reliable seizure predictions, striking a balance between correctly identifying positive instances and minimizing both false positives and false negatives. From the data above, we can see that the SVM is the best model that fits this criteria with an accuracy of 97.83%, F1 score of 94.49%, and a count of 36 for type 2 errors.</p>
-      <img src="sample.png" class="img-responsive">
+      <img src="img/LR_CM.png" class="img-responsive">
 
         <!-- Naive Bayesian -->
       <div class="container text-left body-cont">
@@ -159,24 +161,34 @@ The Epileptic Seizure Recognition dataset provides an opportunity to explore the
           <div class="container text-left body-cont">
             <h3>Decision Tree</h3>
             <div class="row">
+              <img src="img/DT_PLT.png" class="img-responsive">
               <div class="col">
                 <h3>What is this model?</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p># Decision Tree
+                  A decision tree (DT) is a supervised machine learning algorithm used for both classification and regression, it uses a set of rules to make a decision similarly to how a human would make decisions. The nodes of a DT are decision nodes based on a particular feature in the dataset, each node branches into two or more outcomes based on the decision node. DTs can be considered a greedy top-down algorithm. At each node, we want to either minimize the Gini Index or maximize Information Gain. 
+                  </p>
               </div>
               <div class="col">
                 <h3>Our application</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <p>We decided on a DT classifier that uses the Gini Index measure because:
+                  1. DTs are nonparametric, so it works well with our data since it does not follow a specific distribution
+                  2. Gini Index DTs are often used to classify target variables that are binary, which aligns with our goal of classifying seizure vs non-seizure patients
+                  3. Gini Index DTs are computationally more efficient than Entropy DTs</p>
               </div>
             </div>
             <div class="row">
               <h3>Package use</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p> 
+                DTs can use Gini Index or Entropy+Information Gain to measure the impurity of a split at each node.
+                - ***Gini Index:*** measures the probability of a random instance (datapoint) being misclassified based on according to distribution of labels in the subset. Gini Index can range from 0 to 1; a lower Gini Index indicates a lower likelihood of misclassification, making it a better measure of impurity.
+                - ***Entropy:*** measures the degree of randomness at a particular node. Entropy can range from 0 to 0.5; a smaller Entropy indicates the subset of datapoints have higher puurity/homogeneity.
+                - ***Information Gain:*** the difference between the entropy of the parent node and the average of the entropies of its child nodes.</p>
             </div>
             <div class="row">
               <h3>Results</h3>
         
               <p>Given our goal is to identify the most optimal classification model for predicting epileptic seizures from EEG data, we define the "best model" as the one exhibiting the highest accuracy, highest F1 score, and the lowest number of type 2 errors (false negatives). In this context, a type 2 error refers to the situation where the model fails to identify seizure activity when a patient is experiencing an actual seizure. Given the critical nature of this scenario, minimizing type 2 errors is an imperative component of the best model. The above selection criteria ensures precise and reliable seizure predictions, striking a balance between correctly identifying positive instances and minimizing both false positives and false negatives. From the data above, we can see that the SVM is the best model that fits this criteria with an accuracy of 97.83%, F1 score of 94.49%, and a count of 36 for type 2 errors.</p>
-              <img src="sample.png" class="img-responsive">
+              <img src="img/DT_CM.png" class="img-responsive">
 
   <!--K-Nearest Neighbor (K-NN)-->
               <div class="container text-left body-cont">
@@ -184,44 +196,51 @@ The Epileptic Seizure Recognition dataset provides an opportunity to explore the
                 <div class="row">
                   <div class="col">
                     <h3>What is this model?</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p>K-Nearest Neighbors (KNN) is a simple yet powerful non-parametric supervised learning algorithm used for classification and regression tasks. It operates on the principle that data points with similar features are likely to belong to the same class or have similar outputs. KNN has a wide range of applications, including healthcare, recommendation systems, and pattern recognition.</p>
                   </div>
                   <div class="col">
                     <h3>Our application</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <p>The main parameters in KNN are K, which determines the number of neighbors considered when making predictions, and the distance metric used to measure the similarity between data points. When applying KNN to seizure prediction based on EEG readings, the preprocessed EEG features are considered as inputs, and the class labels (seizure or non-seizure) are used to make predictions based on the K nearest neighbors.It is important to carefully choose the values of K and the distance metric when applying KNN to seizure prediction to ensure optimal performance. The selection of K should be based on the specific dataset and problem at hand, and the choice of distance metric should be aligned with the nature of the EEG features and the underlying assumptions of the data.
+                    </p>
                   </div>
                 </div>
                 <div class="row">
                   <h3>Package use</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p>The KNN algorithm works by storing the entire training dataset as the model and using it to make predictions on new, unseen data points. When predicting the class or output of a new instance, KNN looks at the K nearest neighbors in the training dataset, where K is a user-defined parameter. The prediction is then based on the majority class or the average of the outputs of those K neighbors.
+                  </p>
                 </div>
                 <div class="row">
                   <h3>Results</h3>
             
                   <p>Given our goal is to identify the most optimal classification model for predicting epileptic seizures from EEG data, we define the "best model" as the one exhibiting the highest accuracy, highest F1 score, and the lowest number of type 2 errors (false negatives). In this context, a type 2 error refers to the situation where the model fails to identify seizure activity when a patient is experiencing an actual seizure. Given the critical nature of this scenario, minimizing type 2 errors is an imperative component of the best model. The above selection criteria ensures precise and reliable seizure predictions, striking a balance between correctly identifying positive instances and minimizing both false positives and false negatives. From the data above, we can see that the SVM is the best model that fits this criteria with an accuracy of 97.83%, F1 score of 94.49%, and a count of 36 for type 2 errors.</p>
-                  <img src="sample.png" class="img-responsive">
+                  <img src="img/KNN_CM.png " class="img-responsive">
 
   <div class="container text-left body-cont">
     <h3>Support Vector Machine (SVM)</h3>
     <div class="row">
       <div class="col">
         <h3>What is this model?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>SVMs are a set of supervised machine learning algorithms used for classficiation and regression. Support Vector Classifier (SVC) is an implementation of SVMs specifically used for classification problems. SVCs aim to find the optimal hyperplane that separates the datapoints into two classes with the maximum margin.
+
+          Margin: the distance between the hyperplane and the closest data points from each class.</p>
       </div>
       <div class="col">
         <h3>Our application</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>We decided to use a SVC because:
+
+          Our dataset has a large number of features (178 predictors) and SVCs can handle datasets with high-dimensional spaces.
+          Our target variable is binary (seizure or non-seizure), so no additional transformations are needed to train SVC</p>
       </div>
     </div>
     <div class="row">
       <h3>Package use</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      <p>The SVC function allows users to create an SVM model and customize its parameters, such as the type of kernel used, regularization parameter, and class weighting. It can handle both binary and multiclass classification problems and provides methods for training the model on a given dataset and making predictions on new data.</p>
     </div>
     <div class="row">
       <h3>Results</h3>
 
       <p>Given our goal is to identify the most optimal classification model for predicting epileptic seizures from EEG data, we define the "best model" as the one exhibiting the highest accuracy, highest F1 score, and the lowest number of type 2 errors (false negatives). In this context, a type 2 error refers to the situation where the model fails to identify seizure activity when a patient is experiencing an actual seizure. Given the critical nature of this scenario, minimizing type 2 errors is an imperative component of the best model. The above selection criteria ensures precise and reliable seizure predictions, striking a balance between correctly identifying positive instances and minimizing both false positives and false negatives. From the data above, we can see that the SVM is the best model that fits this criteria with an accuracy of 97.83%, F1 score of 94.49%, and a count of 36 for type 2 errors.</p>
-      <img src="sample.png" class="img-responsive">
+      <img src="img/SVM_CM.png" class="img-responsive">
 
 >>>>>>> 39a667a3d63dab241ab30403ed37929fcfa56ff0 <!--Issue #1-->
 
