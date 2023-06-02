@@ -128,16 +128,25 @@ The Epileptic Seizure Recognition dataset provides an opportunity to explore the
         <div class="row">
           <div class="col">
             <h3>What is this model?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p> Gaussian Naive Bayesian, also known as GaussianNB, is a probabilistic classification algorithm based on Bayes' theorem, which assumes independence between the features in the dataset. The algorithm is called "naive" because it makes the simplifying assumption that the features are independent of each other, which may not always be true in real-world datasets. GaussianNB is particularly well-suited for datasets with continuous features, as it models each feature using a Gaussian distribution. In classification, GaussianNB calculates the probability that a given data point belongs to a particular class based on the probability of the features, assuming that the features are normally distributed. This probability is then used to make a classification decision. GaussianNB is relatively fast and requires relatively small amounts of training data, making it a popular choice for classification problems with high-dimensional datasets. </p>
           </div>
           <div class="col">
             <h3>Our application</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>GNB assumes that the features of the dataset are independent and normally distributed, which makes it particularly well-suited for modeling EEG data. In a seizure prediction project, the algorithm can be trained on a dataset of EEG recordings, with each recording labeled as either "seizure" or "non-seizure." The algorithm then uses the probability distribution of the features to calculate the probability that a given recording belongs to each class. By setting a threshold for the probability, the algorithm can make a prediction on whether the next recording is likely to be a seizure or not. GNB can be a powerful tool in seizure prediction projects, as it can analyze large amounts of EEG data quickly and accurately, potentially improving patient outcomes by allowing for earlier and more accurate diagnoses.</p>
           </div>
         </div>
         <div class="row">
           <h3>Package use</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          <p>The Gaussian Naive Bayes classifier is a machine learning algorithm that is used for classification tasks. Specifically, it calculates the probability of a given data point belonging to a certain class based on the probability of the features in the dataset, assuming that the features are normally distributed and independent of each other.
+
+            In order to make a classification decision, the algorithm first calculates the probability that a data point belongs to each class based on the features, using Bayes' theorem. It then assigns the data point to the class with the highest probability.
+            
+            The "naive" assumption in the algorithm is that the features are independent of each other, which may not always be true in real-world datasets. Despite this simplifying assumption, the Gaussian Naive Bayes classifier can perform well on a wide variety of classification tasks and is particularly well-suited for datasets with continuous features.
+            
+            Parameters
+            Prior probabilities: The prior probabilities represent the probability of each class occurring in the dataset before any evidence is taken into account. These probabilities can be estimated from the training data or set manually.
+            
+            Class conditional probabilities: The class conditional probabilities represent the probability of each feature given each class. In Gaussian Naive Bayes, these probabilities are modeled using a Gaussian distribution with mean and variance estimated from the training data for each class and feature.</p>
         </div>
         <div class="row">
           <h3>Results</h3>
@@ -236,7 +245,7 @@ The Epileptic Seizure Recognition dataset provides an opportunity to explore the
       <div class="col">
         <h3>Our Dataset</h3>
         <p>The detection and diagnosis of epileptic seizures is an important area of medical research, as timely detection and treatment can greatly improve patient outcomes. The Epileptic Seizure Recognition dataset, available on Kaggle, provides EEG data for the classification of seizures and non-seizure states. This dataset contains 5,000 recordings from 5 different patients, with each recording consisting of 23.6 seconds of EEG data sampled at 178 Hz. The data is labeled as either "seizure" or "non-seizure", and there are 5 different sets of data for different patients.</p>
-        <img src="img/raw_data.PNG" class="img-responsive">
+        <img src="img/raw.png" class="img-responsive">
       </div>
       <div class="col">
         <img src="img/eegcomparisons.png" class="img-responsive">
