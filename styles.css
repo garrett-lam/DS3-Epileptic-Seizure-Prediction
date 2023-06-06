@@ -66,3 +66,17 @@ img {
 .row {
   margin-top: 3vh;
 }
+
+.image-above {
+  margin-top: 10vh;
+}
+
+.lineplot {
+  max-width: 750px;
+  height: auto;
+}
+
+.conf-matrix {
+  max-width: 750px;
+  height: auto;
+}
